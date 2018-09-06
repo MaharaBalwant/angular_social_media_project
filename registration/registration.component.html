@@ -1,0 +1,45 @@
+<form (ngSubmit)="regForm.form.valid && onSubmitRegNewUser(user)" #regForm="ngForm" [ngStyle]="{'filter':blurVal}">
+<div class="reg_comp_div">
+  <div class="form-group" [ngClass]="{ 'has-error': regForm.submitted && !userName.valid }">
+    <input placeholder="* Username" class="form-control reg_input_field" type="text" name="userName" #userName="ngModel" [(ngModel)]="user.userName" required/>
+    <div *ngIf="regForm.submitted && !userName.valid" class="help-block">Username is required</div>
+  </div>
+  <div class="form-group" [ngClass]="{ 'has-error': regForm.submitted && !userEmail.valid }">
+    <input placeholder="* Email Address" class="form-control reg_input_field" type="text" name="userEmail" #userEmail="ngModel" [(ngModel)]="user.userEmail" required/>
+    <div *ngIf="regForm.submitted && !userEmail.valid" class="help-block">Email Address is required</div>
+  </div>
+  <div class="form-group" [ngClass]="{ 'has-error': regForm.submitted && !password.valid }">
+    <input placeholder="* Password" class="form-control reg_input_field" type="password" name="password" #password="ngModel" [(ngModel)]="user.password" required/>
+    <div *ngIf="regForm.submitted && !password.valid" class="help-block">Password is required</div>
+  </div>
+  <div class="form-group" [ngClass]="{ 'has-error': regForm.submitted && !repassword.valid }">
+    <input placeholder="* Re-enter Password" class="form-control reg_input_field" type="password" name="repassword" #repassword="ngModel" [(ngModel)]="user.repassword" required/>
+    <div *ngIf="regForm.submitted && !repassword.valid" class="help-block">Re-enter Password is required</div>
+  </div>
+  <div class="m-t-lg">
+    <ul class="list-inline">
+      <li>
+        <!--<input class="btn btn--form" type="submit" (click)="registerProfile()" value="Register" />-->
+        <button class="btn btn--form btn-submit bg-orange-peel" type="submit">Register</button>
+        <a class="btn btn--form bg-orange-peel w3-left-align" (click)="openLoginModal()">Login</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</form>
+
+<!-- Hiddden Follower Div Start-->
+<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="margin-left: 47%; margin-top: 37%;">
+        <div class="modal-header">
+          <h5><b>Member Login</b></h5>
+          <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" style="background:mintcream">
+          <app-login></app-login>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <!-- Hiddden Follower Div Ends-->

@@ -1,0 +1,29 @@
+<div class="cold-lg-12 col-md-12 col-sm-12">
+  <h2>Form to insert data into search</h2>
+  <form name="form" (ngSubmit)="f.form.valid && newsearch()" #f="ngForm" novalidate>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !location.valid }">
+          <label for="location">Location</label>
+          <input type="text" class="form-control" name="location" [(ngModel)]="dataObj.location" #location="ngModel" required />
+          <div *ngIf="f.submitted && !location.valid" class="help-block">Location is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !timefrom.valid }">
+        <label for="timefrom">Time From</label>
+        <input type="text" class="form-control" name="timefrom" [(ngModel)]="dataObj.timefrom" #timefrom="ngModel" required />
+        <div *ngIf="f.submitted && !timefrom.valid" class="help-block">Time from is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !timeto.valid }">
+        <label for="timeto">Time To</label>
+        <input type="text" class="form-control" name="timeto" [(ngModel)]="dataObj.timeto" #timeto="ngModel" required />
+        <div *ngIf="f.submitted && !timeto.valid" class="help-block">time to is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !date.valid }">
+        <label for="date">Date</label>
+        <input type="text" class="form-control" name="date" [(ngModel)]="dataObj.date" #date="ngModel" required />
+        <div *ngIf="f.submitted && !date.valid" class="help-block">Date is required</div>
+      </div>
+      <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">Submit</button>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+      </div>
+  </form>
+</div>

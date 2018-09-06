@@ -1,0 +1,93 @@
+<app-afterlogin-menu></app-afterlogin-menu>
+<fieldset>
+  <div class="container">
+    <!-- Latest Top Three Searches Box Starts-->
+    <div class="row">
+      <div class="hero-01" *ngFor="let x of records; let rowIndex = index">
+        <div class="hero-border">
+          <div class="top"></div>
+          <div class="bottom"></div>
+          <div class="left"></div>
+          <div class="right">
+            <div class="v-area">
+              <div class="v-middle  show-span">
+                <div class="p5" id="label-menu">
+                  <span>{{rowIndex + 1}} - </span>
+                  <span></span>
+                  <span>S</span>
+                  <span>E</span>
+                  <span>A</span>
+                  <span>R</span>
+                  <span>C</span>
+                  <span>H</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-hero">
+          <div class="v-content">
+            <h4 class="font-normal">Location : {{x.location}}</h4>
+            <h4 class="myname">Time : {{x.time_from}} - {{x.time_to}}</h4>
+            <h4 class="font-normal with-line">Date : {{x.date}}</h4>
+            <p>
+              <a href="#" class="btn btnc1">
+                <span>Edit</span>
+              </a> 
+              <a href="#" class="btn btnc1">
+                <span>Delete</span>
+              </a>
+              <a href="" class="match_class">
+                  <span>3 match</span>
+                </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Latest Top Three Searches Box Ends-->
+    
+    <div class="row">
+      <app-newsearchform></app-newsearchform>
+      <div class="cold-lg-6 col-md-6 col-sm-12">
+          <h2>Complete list of all searches</h2>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> S. No. </th>
+                <td mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </td>
+              </ng-container>
+            
+              <!-- location Column -->
+              <ng-container matColumnDef="location">
+                <th mat-header-cell *matHeaderCellDef> Location </th>
+                <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+              </ng-container>
+            
+              <!-- time_to Column -->
+              <ng-container matColumnDef="time_to">
+                <th mat-header-cell *matHeaderCellDef> Time to </th>
+                <td mat-cell *matCellDef="let element"> {{element.time_to}} </td>
+              </ng-container>
+            
+              <!-- time_from Column -->
+              <ng-container matColumnDef="time_from">
+                <th mat-header-cell *matHeaderCellDef> Time from </th>
+                <td mat-cell *matCellDef="let element"> {{element.time_from}} </td>
+              </ng-container>
+
+              <!-- date Column -->
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->
+      </div>
+    </div>
+  </div>
+</fieldset>

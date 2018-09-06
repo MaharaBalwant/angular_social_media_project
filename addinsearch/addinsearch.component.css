@@ -1,0 +1,154 @@
+.searchheadleft{
+    height: 80%;
+}
+.savedtemplate{
+    float: left;
+    width: 80%;
+    border: 1px solid #0000;
+    background-color: greenyellow;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.matchcountdiv{
+    float: right;
+    width: 20%;
+    height: 100%;
+    border: 1px solid #0000;
+    background-color: rgba(0, 128, 0, 0.507);
+    display: inline-table;
+}
+
+ul li
+{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero-01 {
+    background-color: blue; 
+    background-size: auto auto;
+    background-size: cover;
+    width: 29%;
+    /* position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0; */
+    color: #ffffff;
+    margin-right: 49px;
+}
+
+.hero-01 .my-thumb {
+    position: absolute;
+    top: 0;
+    z-index: 12;
+}
+
+.hero-01 .content-hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.hero-01 .v-content {
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.hero-01 .myname {
+    /* font-size: 60px; */
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hero-01 .font-normal {
+    /* font-size: 60px; */
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.hero-01 .with-line {
+    border-bottom: 1px solid #dddddd;
+    font-size: 12px;
+    padding-bottom: 10px;
+    position: relative;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btnc1 {
+    font-family: 'Sarala', sans-serif;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    min-width: 90px;
+    transition: color 0.6s ease 0.3s;
+}
+
+.hero-01 .hero-border > .right {
+    background: #1e1e1e;
+    border-right: 1px solid #000000;
+}
+
+.hero-01 .v-area {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    margin-right: 1px;
+    width: 100%;
+    display: table;
+}
+
+.hero-01 .v-area .v-middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.p5 {
+    padding: 5px 0;
+}
+
+.hero-01 .v-area .v-middle span {
+    color: #ffffff;
+}
+
+.match_class {
+    color: #FFFFFF;
+    float: right;
+    position: relative;
+    padding: 8px;
+}
+
+
+
+
+
+
+table {
+    width: 100%;
+  }
